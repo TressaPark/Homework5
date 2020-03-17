@@ -1,14 +1,13 @@
 let inputArray = []
+console.log(localStorage.getItem('9'));
+$("#nine").val(localStorage.getItem('9'))
 $('.saveBtnnine').on('click', function(e) {
  e.preventDefault();
+ //hour 9 input
  var input = $('#nine').val();
  inputArray.push (input)
- textField = localStorage.getItem('items')
- var parsedObject = JSON.parse(textField)
- if (input === null) {
- $('#nine').val(parsedObject)
-}
- localStorage.setItem('items',JSON.stringify(inputArray))
+
+ localStorage.setItem("9" ,input)
  
 })
 
