@@ -1,24 +1,48 @@
-let inputArray = []
 console.log(localStorage.getItem('9'));
-$("#nine").val(localStorage.getItem('9'))
+getval();
+function getval(){
+    $("#nine").val(localStorage.getItem('9'));
+    $("#ten").val(localStorage.getItem('10'));
+    $("#eleven").val(localStorage.getItem('11'))
+}
+
 $('.saveBtnnine').on('click', function(e) {
  e.preventDefault();
  //hour 9 input
  var input = $('#nine').val();
- inputArray.push (input)
-
  localStorage.setItem("9" ,input)
- 
+ getval();
 })
 
+console.log(localStorage.getItem('10'));
+
 $('.saveBtnten').on('click', function(e) {
-    e.preventDefault();
-    var input = $('#ten').val();
-    inputArray.push (input)
-    localStorage.setItem('items',JSON.stringify(inputArray))
-    console.log(input);  console.log('hello')
-    console.log(inputArray)
-   })
+ e.preventDefault();
+ //hour 10 input
+ var input = $('#ten').val();
+ localStorage.setItem("10" ,input)
+ getval();
+})
+
+console.log(localStorage.getItem('11'));
+
+$('.saveBtneleven').on('click', function(e) {
+ e.preventDefault();
+ //hour 11 input
+ var input = $('#eleven').val();
+ localStorage.setItem("11" ,input)
+ getval();
+})
+
+// console.log(localStorage.getItem('11'));
+// $("#nine").val(localStorage.getItem('11'))
+// $('.saveBtnnine').on('click', function(e) {
+//  e.preventDefault();
+//  //hour 11 input
+//  var input = $('#eleven').val();
+//  inputArray.push (input)
+//  localStorage.setItem("11" ,input)
+// })
 
    $('.saveBtneleven').on('click', function(e) {
     e.preventDefault();
