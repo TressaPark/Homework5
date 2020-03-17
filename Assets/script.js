@@ -1,9 +1,15 @@
-console.log(localStorage.getItem('9'));
+// console.log(localStorage.getItem('9'));
 getval();
 function getval(){
     $("#nine").val(localStorage.getItem('9'));
     $("#ten").val(localStorage.getItem('10'));
-    $("#eleven").val(localStorage.getItem('11'))
+    $("#eleven").val(localStorage.getItem('11'));
+    $("#twelve").val(localStorage.getItem('12'));
+    $("#one").val(localStorage.getItem('1'));
+    $("#two").val(localStorage.getItem('2'));
+    $("#three").val(localStorage.getItem('3'));
+    $("#four").val(localStorage.getItem('4'));
+    $("#five").val(localStorage.getItem('5'));
 }
 
 $('.saveBtnnine').on('click', function(e) {
@@ -14,8 +20,6 @@ $('.saveBtnnine').on('click', function(e) {
  getval();
 })
 
-console.log(localStorage.getItem('10'));
-
 $('.saveBtnten').on('click', function(e) {
  e.preventDefault();
  //hour 10 input
@@ -23,8 +27,6 @@ $('.saveBtnten').on('click', function(e) {
  localStorage.setItem("10" ,input)
  getval();
 })
-
-console.log(localStorage.getItem('11'));
 
 $('.saveBtneleven').on('click', function(e) {
  e.preventDefault();
@@ -35,74 +37,53 @@ $('.saveBtneleven').on('click', function(e) {
 })
 
 // console.log(localStorage.getItem('11'));
-// $("#nine").val(localStorage.getItem('11'))
-// $('.saveBtnnine').on('click', function(e) {
-//  e.preventDefault();
-//  //hour 11 input
-//  var input = $('#eleven').val();
-//  inputArray.push (input)
-//  localStorage.setItem("11" ,input)
-// })
 
-   $('.saveBtneleven').on('click', function(e) {
+$('.saveBtntwelve').on('click', function(e) {
     e.preventDefault();
-    var input = $('#eleven').val();
-    inputArray.push (input)
-    localStorage.setItem('items',JSON.stringify(inputArray))
-    console.log(input);  console.log('hello')
-    console.log(inputArray)
-   })
-
-   $('.saveBtntwelve').on('click', function(e) {
-    e.preventDefault();
+    //hour 12 input
     var input = $('#twelve').val();
-    inputArray.push (input)
-    localStorage.setItem('items',JSON.stringify(inputArray))
-    console.log(input);  console.log('hello')
-    console.log(inputArray)
+    localStorage.setItem("12" ,input)
+    getval();
    })
 
    $('.saveBtnone').on('click', function(e) {
     e.preventDefault();
+    //hour 1 input
     var input = $('#one').val();
-    inputArray.push (input)
-    localStorage.setItem('items',JSON.stringify(inputArray))
-    console.log(input);  console.log('hello')
-    console.log(inputArray)
+    localStorage.setItem("1" ,input)
+    getval();
    })
 
    $('.saveBtntwo').on('click', function(e) {
     e.preventDefault();
+    //hour 2 input
     var input = $('#two').val();
-    inputArray.push (input)
-    localStorage.setItem('items',JSON.stringify(inputArray))
-    console.log(input);  console.log('hello')
-    console.log(inputArray)
+    localStorage.setItem("2" ,input)
+    getval();
    })
 
    $('.saveBtnthree').on('click', function(e) {
     e.preventDefault();
+    //hour 3 input
     var input = $('#three').val();
-    inputArray.push (input)
-    localStorage.setItem('items',JSON.stringify(inputArray))
-    console.log(input);  console.log('hello')
-    console.log(inputArray)
+    localStorage.setItem("3" ,input)
+    getval();
    })
 
    $('.saveBtnfour').on('click', function(e) {
     e.preventDefault();
+    //hour 4 input
     var input = $('#four').val();
-    inputArray.push (input)
-    localStorage.setItem('items',JSON.stringify(inputArray))
-    console.log(input);  console.log('hello')
-    console.log(inputArray)
+    localStorage.setItem("4" ,input)
+    getval();
    })
 
    $('.saveBtnfive').on('click', function(e) {
     e.preventDefault();
+    //hour 5 input
     var input = $('#five').val();
-    inputArray.push (input)
-    localStorage.setItem('items',JSON.stringify(inputArray))
-    console.log(input);  console.log('hello')
-    console.log(inputArray)
+    localStorage.setItem("5" ,input)
+    getval();
    })
+
+//    Each timeblock is color coded to indicate whether it is in a past, present, or future hour.
