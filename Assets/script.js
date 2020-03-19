@@ -89,3 +89,4 @@ $('.saveBtntwelve').on('click', function(e) {
    })
 
 //    Each timeblock is color coded to indicate whether it is in a past, present, or future hour.
+// Originally, Jill and I worked on this homework together. I have also worked on this with my tutor.
